@@ -1,0 +1,6 @@
+﻿order_id,order_date,product,quantity,unit_price
+1001,2026-10-01,Keyboard,2,89.99
+1002,2026-10-02,Mouse,3,29.99
+1003,2026-10-03,Monitor,1,249.99
+1004,2026-10-04,Keyboard,1,89.99
+1005,2026-10-05,Headset,2,59.99
