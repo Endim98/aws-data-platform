@@ -19,9 +19,9 @@ jobs:
       - name: Check sample dataset exists
         run: test -f data/sales.csv
 
-      - name: Check CSV header
+           - name: Check CSV header
         run: |
-          head -n 1 data/sales.csv | grep -Fx "order_id,order_date,product,quantity,unit_price"
+          python -c "import csv; f=open('data/sales.csv', encoding='utf-8-sig', newline=''); header=next(csv.reader(f)); assert header == ['order_id', 'order_date', 'product', 'quantity', 'unit_price'], f'Unexpected CSV header: {header}'; print('CSV header is valid')"
 
       - name: Confirm Terraform configuration directory exists
         run: test -d terraform
